@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "btcpay": "0.2.2",
+    "btcpay": "^0.2.4",
     "cookie-parser": "1.4.3",
     "cors": "2.8.5",
     "debug": "2.6.9",
