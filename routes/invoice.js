@@ -16,7 +16,15 @@ router.get('/:id', async function(req, res, next) {
 
 /* Create invoice. */
 router.post('/', function(req, res, next) {
-
+    var dollarAmount = req.body.amount;
+    //create invoice
+    client.create_invoice({price: dollarAmount, currency: 'USD'})
+    .then(invoice => {
+        res.render('invoice', {invoiceId: invoice.id})
+    })
+    .catch(err => console.log(err));
+    //Display
+    //Follow up
 });
 
 

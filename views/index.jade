@@ -1,0 +1,10 @@
+h1=message
+p This is a payment service utilizing the Lightning Network.
+div
+    h2 Submit Payment
+    form(method='post', action='/invoice')
+        p
+            label Amount
+            input(type='number', name='amount')
+        p
+            input(type='submit', name='submit')
