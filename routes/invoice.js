@@ -19,13 +19,11 @@ router.post('/', function(req, res, next) {
     var dollarAmount = req.body.amount;
     //create invoice
     client.create_invoice({price: dollarAmount, currency: 'USD'})
+    //many more parameters can be send (see docs)
     .then(invoice => {
         res.render('invoice', {invoiceId: invoice.id})
     })
     .catch(err => console.log(err));
-    //Display
-    //Follow up
 });
-
 
 module.exports = router;
